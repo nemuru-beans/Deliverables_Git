@@ -8,7 +8,7 @@ from linebot.v3.messaging import (
     MessagingApi,
     BroadcastRequest,
     TextMessage)
-import 天気予報.config as config
+import config
 #import json
 #import os
 
@@ -71,4 +71,5 @@ configuration = Configuration(access_token=channel_access_token)
 with ApiClient(configuration) as api_client:
     line_bot_api = MessagingApi(api_client)
     line_bot_api.broadcast(BroadcastRequest(messages=[message]))
+#print(channel_access_token)
 #print(message)
